@@ -1,8 +1,9 @@
 package main
 
 import (
-	"github.com/gin-gonic/gin"
 	"net/http"
+
+	"github.com/gin-gonic/gin"
 )
 
 func main() {
@@ -14,7 +15,7 @@ func main() {
 		c.JSON(http.StatusOK, gin.H{
 			"success": true,
 			"message": "Welcome to GinLab!",
-			"version": "1.0.0",
+			"version": "1.0.2",
 		})
 	})
 

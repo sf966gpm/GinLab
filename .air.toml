@@ -1,0 +1,13 @@
+root = "."
+tmp_dir = "tmp"
+
+[build]
+cmd = "go build -buildvcs=false -o tmp/main ."
+bin = "tmp/main"
+delay = 1000
+exclude_dir = ["vendor", ".git", "tmp"]
+include_ext = ["go", "html", "tmpl"]
+kill_delay = "500ms"
+
+[log]
+time = true
