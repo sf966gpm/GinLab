@@ -2,14 +2,14 @@ services:
   ginlab:
     build:
       context: .
-      target: dev  # Используем dev-стадию
-      dockerfile: go.Dockerfile
+      target: dev
+      dockerfile: docker/go.Dockerfile
     ports:
       - "8080:8080"
     volumes:
-      - .:/app  # Монтируем код
+      - ./app:/app  # Монтируем код
     environment:
       - TZ=Europe/Moscow
       - AIR_ENV=DEV
       - GOCACHE=/app/.cache
-    command: air  # Явно указываем команду
+    command: air
